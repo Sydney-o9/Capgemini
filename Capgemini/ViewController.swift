@@ -1,10 +1,9 @@
-//
-//  ViewController.swift
-//  Capgemini
-//
-//  Created by Anthony Rey on 13/6/18.
-//  Copyright © 2018 Capgemini Consulting. All rights reserved.
-//
+/**
+ *  ViewController.swift
+ *
+ *  Created by Anthony Rey <anthony.rey21@gmail.com>
+ *  Copyright © 2018 Capgemini Consulting. All rights reserved.
+ */
 
 import UIKit
 

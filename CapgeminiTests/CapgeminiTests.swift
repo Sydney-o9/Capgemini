@@ -1,10 +1,9 @@
-//
-//  CapgeminiTests.swift
-//  CapgeminiTests
-//
-//  Created by Anthony Rey on 13/6/18.
-//  Copyright © 2018 Capgemini Consulting. All rights reserved.
-//
+/**
+ *  CapgeminiTests.swift
+ *
+ *  Created by Anthony Rey <anthony.rey21@gmail.com>
+ *  Copyright © 2018 Capgemini Consulting. All rights reserved.
+ */
 
 import XCTest
 @testable import Capgemini
