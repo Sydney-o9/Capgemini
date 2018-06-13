@@ -32,7 +32,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BwY-EP-hYs">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultStoryImage" translatesAutoresizingMaskIntoConstraints="NO" id="BwY-EP-hYs">
                                                     <rect key="frame" x="15" y="7" width="75" height="66"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="66" id="ev1-yb-FeJ"/>
@@ -118,4 +118,7 @@
             <point key="canvasLocation" x="-226" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DefaultStoryImage" width="75" height="75"/>
+    </resources>
 </document>
