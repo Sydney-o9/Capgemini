@@ -14,6 +14,10 @@
 		3E11B67A20D0C50F000229CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E11B67820D0C50F000229CA /* LaunchScreen.storyboard */; };
 		3E11B68520D0C510000229CA /* CapgeminiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11B68420D0C510000229CA /* CapgeminiTests.swift */; };
 		3E11B69020D0C510000229CA /* CapgeminiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11B68F20D0C510000229CA /* CapgeminiUITests.swift */; };
+		3E11B6A320D0D354000229CA /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11B6A220D0D354000229CA /* Feed.swift */; };
+		3E11B6A520D0D35E000229CA /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11B6A420D0D35E000229CA /* Story.swift */; };
+		3E11B6AB20D0DA2B000229CA /* feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E11B6AA20D0DA2B000229CA /* feed.json */; };
+		3E11B6AE20D0DC11000229CA /* DecodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11B6AD20D0DC11000229CA /* DecodableExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		3E11B68B20D0C510000229CA /* CapgeminiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapgeminiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E11B68F20D0C510000229CA /* CapgeminiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapgeminiUITests.swift; sourceTree = "<group>"; };
 		3E11B69120D0C510000229CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E11B6A220D0D354000229CA /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		3E11B6A420D0D35E000229CA /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		3E11B6AA20D0DA2B000229CA /* feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feed.json; sourceTree = "<group>"; };
+		3E11B6AD20D0DC11000229CA /* DecodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,8 @@
 			children = (
 				3E11B6A020D0C967000229CA /* App Delegate */,
 				3E11B69F20D0C962000229CA /* Assets */,
+				3E11B6AC20D0DBED000229CA /* Utilities */,
+				3E11B6A120D0D064000229CA /* Model */,
 				3E11B69E20D0C929000229CA /* View Controllers */,
 				3E11B69D20D0C90D000229CA /* Storyboards */,
 				3E11B67B20D0C50F000229CA /* Info.plist */,
@@ -110,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3E11B68420D0C510000229CA /* CapgeminiTests.swift */,
+				3E11B6A820D0D8FD000229CA /* data */,
 				3E11B68620D0C510000229CA /* Info.plist */,
 			);
 			path = CapgeminiTests;
@@ -155,6 +166,31 @@
 				3E11B66F20D0C50E000229CA /* AppDelegate.swift */,
 			);
 			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		3E11B6A120D0D064000229CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E11B6A220D0D354000229CA /* Feed.swift */,
+				3E11B6A420D0D35E000229CA /* Story.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3E11B6A820D0D8FD000229CA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3E11B6AA20D0DA2B000229CA /* feed.json */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		3E11B6AC20D0DBED000229CA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3E11B6AD20D0DC11000229CA /* DecodableExtension.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E11B6AB20D0DA2B000229CA /* feed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E11B67220D0C50E000229CA /* ViewController.swift in Sources */,
+				3E11B6A320D0D354000229CA /* Feed.swift in Sources */,
 				3E11B67020D0C50E000229CA /* AppDelegate.swift in Sources */,
+				3E11B6AE20D0DC11000229CA /* DecodableExtension.swift in Sources */,
+				3E11B6A520D0D35E000229CA /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
