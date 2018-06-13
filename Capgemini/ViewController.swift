@@ -8,10 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK:  - Properties
+    
+    var feedDownloader: FeedDownloader?
 
+    // MARK:  - UIViewController
+    
+    /**
+     * Called after the controller's view is loaded into memory.
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        feedDownloader = FeedDownloader(feedURL: CapgeminiApi.feedURL)
+        feedDownloader?.downloadFeed()
+    }
+    
+    /**
+     * Notifies the view controller that its view was added to a view hierarchy.
+     */
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
