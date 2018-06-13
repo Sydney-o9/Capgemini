@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     var feedDownloader: FeedDownloader?
     
+    var imageDownloader: ImageDownloader?
+    
     var tableData: [Story] = []
 
     // MARK:  - UIViewController
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
         feedDownloader = FeedDownloader(feedURL: CapgeminiApi.feedURL)
         feedDownloader?.delegate = self
         feedDownloader?.downloadFeed()
+        
+        imageDownloader = ImageDownloader()
     }
     
     /**
@@ -53,8 +57,7 @@ class ViewController: UIViewController {
 extension ViewController: FeedDownloaderDelegate {
     
     func didFinishDownloadingFeed(_ sender: FeedDownloader) {
-        print("-> Finished downloading from remote server.")
-        print("Decoded Feed Struct: " + (feedDownloader?.decodedFeed?.getString())!)
+        print("-> [OK] Finished Feed download from remote server.")
         
         if let title = feedDownloader?.decodedFeed?.title {
             self.title = title
@@ -77,7 +80,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        print("Dequeing cell \(indexPath.row)")
+        print("-> [OK] Dequeuing cell \(indexPath.row)")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCellIdentifier", for: indexPath) as! StoryTableViewCell
         let story: Story = self.tableData[indexPath.row]
@@ -92,6 +95,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             cell.storyDescriptionLabel?.textColor = UIColor.gray
             cell.storyDescriptionLabel?.text = "No description for this story"
+        }
+        
+        /** Update Image */
+        cell.storyImageView.contentMode = .scaleAspectFit
+        cell.storyImageView.image = UIImage(named: "DefaultStoryImage")
+        guard let imageURL = story.imageHref else { return cell }
+        imageDownloader?.downloadImageFromURL(imageURL) {
+            (success, image) -> Void in
+            if success && image != nil {
+                if tableView.indexPath(for: cell)?.row == indexPath.row {
+                    cell.storyImageView.image = image
+                }
+            }
         }
         
         return cell
