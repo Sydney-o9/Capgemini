@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Allow full-display of the splash screen for 2.0 seconds
+        Thread.sleep(forTimeInterval: 2.0)
+        
         return true
     }
 
