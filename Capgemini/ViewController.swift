@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         feedDownloader = FeedDownloader(feedURL: CapgeminiApi.feedURL)
+        feedDownloader?.delegate = self
         feedDownloader?.downloadFeed()
     }
     
@@ -38,5 +39,18 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: FeedDownloaderDelegate {
+    
+    func didFinishDownloadingFeed(_ sender: FeedDownloader) {
+        print("-> Finished downloading from remote server.")
+        print("Decoded Feed Struct: " + (feedDownloader?.decodedFeed?.getString())!)
+        
+        if let title = feedDownloader?.decodedFeed?.title {
+            self.title = title
+        }
+
+    }
 }
 

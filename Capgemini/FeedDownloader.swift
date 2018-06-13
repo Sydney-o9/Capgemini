@@ -22,6 +22,8 @@ class FeedDownloader: NSObject {
     
     var decodedFeed: Feed?
     
+    weak var delegate: FeedDownloaderDelegate?
+    
     init(feedURL:String) {
         self.feedURL = feedURL
     }
@@ -37,6 +39,10 @@ class FeedDownloader: NSObject {
         guard let feedUrl = URL(string: self.feedURL!) else { return }
         let request = URLRequest(url: feedUrl, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 60)
         let _ = NSURLConnection(request: request, delegate: self, startImmediately: true)
+    }
+    
+    func didDownloadFeed() {
+        delegate?.didFinishDownloadingFeed(self)
     }
     
 }
@@ -78,6 +84,8 @@ extension FeedDownloader: NSURLConnectionDelegate, NSURLConnectionDataDelegate {
         } catch {
             print("[ERROR] -> json error: \(error.localizedDescription)")
         }
+        
+        self.didDownloadFeed()
         
     }
     
