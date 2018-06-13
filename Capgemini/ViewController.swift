@@ -20,6 +20,16 @@ class ViewController: UIViewController {
     var imageDownloader: ImageDownloader?
     
     var tableData: [Story] = []
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(ViewController.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.gray
+        
+        return refreshControl
+    }()
 
     // MARK:  - UIViewController
     
@@ -28,6 +38,8 @@ class ViewController: UIViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.addSubview(self.refreshControl)
         
         tableView.rowHeight = 80
         tableView.estimatedRowHeight = UITableViewAutomaticDimension
@@ -49,6 +61,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK:  - Refresh
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        feedDownloader?.downloadFeed()
+        refreshControl.endRefreshing()
     }
 
 
