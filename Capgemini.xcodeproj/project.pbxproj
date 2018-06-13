@@ -20,6 +20,7 @@
 		3E11B6AE20D0DC11000229CA /* DecodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11B6AD20D0DC11000229CA /* DecodableExtension.swift */; };
 		3E11B6B120D0E6F2000229CA /* FeedDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11B6B020D0E6F2000229CA /* FeedDownloader.swift */; };
 		3E11B6B320D0E731000229CA /* CapgeminiApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11B6B220D0E731000229CA /* CapgeminiApi.swift */; };
+		3E32057520D0ECC30055FF68 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32057420D0ECC30055FF68 /* StoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3E11B6AD20D0DC11000229CA /* DecodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableExtension.swift; sourceTree = "<group>"; };
 		3E11B6B020D0E6F2000229CA /* FeedDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDownloader.swift; sourceTree = "<group>"; };
 		3E11B6B220D0E731000229CA /* CapgeminiApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapgeminiApi.swift; sourceTree = "<group>"; };
+		3E32057420D0ECC30055FF68 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				3E11B6AC20D0DBED000229CA /* Utilities */,
 				3E11B6A120D0D064000229CA /* Model */,
 				3E11B69E20D0C929000229CA /* View Controllers */,
+				3E32057220D0EC7B0055FF68 /* Views */,
 				3E11B6AF20D0E6C0000229CA /* Networking */,
 				3E11B69D20D0C90D000229CA /* Storyboards */,
 				3E11B67B20D0C50F000229CA /* Info.plist */,
@@ -205,6 +208,22 @@
 				3E11B6B220D0E731000229CA /* CapgeminiApi.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		3E32057220D0EC7B0055FF68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E32057320D0ECA30055FF68 /* Table View Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3E32057320D0ECA30055FF68 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3E32057420D0ECC30055FF68 /* StoryTableViewCell.swift */,
+			);
+			name = "Table View Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +365,7 @@
 				3E11B67020D0C50E000229CA /* AppDelegate.swift in Sources */,
 				3E11B6AE20D0DC11000229CA /* DecodableExtension.swift in Sources */,
 				3E11B6A520D0D35E000229CA /* Story.swift in Sources */,
+				3E32057520D0ECC30055FF68 /* StoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
