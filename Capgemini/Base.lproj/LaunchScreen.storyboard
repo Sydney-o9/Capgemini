@@ -20,7 +20,35 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CapgeminiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="eHm-N8-H8n">
+                                <rect key="frame" x="62.5" y="130" width="250" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Ujt-Qe-pZA"/>
+                                    <constraint firstAttribute="height" constant="67" id="km6-oz-ihY"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&quot;The business value of technology comes from and through people.&quot;" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TFC-Wx-j0T">
+                                <rect key="frame" x="37.5" y="249" width="300" height="72"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="AIe-In-4vM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Npe-Mu-nZO"/>
+                                    <constraint firstAttribute="height" constant="72" id="pAg-nn-Ymc"/>
+                                    <constraint firstAttribute="width" constant="300" id="ryt-ku-3Sk"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eHm-N8-H8n" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Dub-b7-UJy"/>
+                            <constraint firstItem="eHm-N8-H8n" firstAttribute="top" secondItem="HQO-yo-uM8" secondAttribute="bottom" constant="110" id="EeB-Yf-CX9"/>
+                            <constraint firstItem="TFC-Wx-j0T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lbo-UV-NC5"/>
+                            <constraint firstItem="TFC-Wx-j0T" firstAttribute="top" secondItem="eHm-N8-H8n" secondAttribute="bottom" constant="52" id="wpE-r5-ImY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,4 +56,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CapgeminiLogo" width="250" height="66"/>
+    </resources>
 </document>
