@@ -32,6 +32,8 @@ If you have any questions, please feel free to let me know.
 
 Anthony
 
+<kbd>Other Notes</kbd> I have had the opportunity to work as a Mortgage Broker and Personal Banker for 1 year and am quite familiar with the Financial Industry. Maybe this is of interest to you if I would be selected to work on ANZ app for example.
+
 ## Final Result
 
 ![Capgemini](https://github.com/Sydney-o9/Capgemini/blob/master/Doc/Capgemini.gif)
