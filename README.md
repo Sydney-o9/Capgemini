@@ -20,7 +20,7 @@ Because each row in the json file does not have an ID like a typical backend wou
 
 6. I have not used any libraries as I assumed you did not want me to (Networking Library, etc.). 
 
-More work can be done on seperation of concern, for example, moving the logic inside `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell` to  ``
+More work can be done on seperation of concern, for example, moving the logic inside `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell` to the prototype cell `StoryTableViewCell`. 
 
 7. Tests are not mentioned in the description and I don't know which framework you typically use. I have shown an example but based on the Overview of the test description, I am not sure if you will be looking at it, it sounds like you are more interested in the structure of the code. Let me know if you want me to add more testing.
 
